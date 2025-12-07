@@ -1,0 +1,3 @@
+To apply to a host you could do 
+
+home-manager -f "./users/$USERNAME.nix"
