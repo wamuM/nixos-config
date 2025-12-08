@@ -3,7 +3,6 @@
 options = {
 	user-config.editor = lib.mkOption {
 		type = lib.types.str;
-		default = "nano";
 		description = "The prefered terminal editor by the user";
 	};
 	user-config.visual = lib.mkOption {

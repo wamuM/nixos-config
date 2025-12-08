@@ -77,9 +77,15 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    pinentry-curses
     home-manager
     vim
   ];
+  
+  # GnuPG config 
+  programs.gnupg.agent.enable = true;
+  hardware.gpgSmartcards.enable = true;
+  programs.gnupg.agent.pinentryPackage = pkgs.pinentry-curses;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
