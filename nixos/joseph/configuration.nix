@@ -1,10 +1,8 @@
 { inputs, config, pkgs, ... }:
-
 {
   imports =
     [ 
       ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.home-manager
     ];
 
   # Boot
@@ -64,16 +62,8 @@
     isNormalUser = true;
     description = "wamu_M";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
-  };
+  }; 
   
-  home-manager = {
-	extraSpecialArgs = { inherit inputs; };
-	users.wamu-m = import ../../home-manager/users/wamu-m/home.nix;
-  };
-
   programs.firefox.enable = true;
 
   programs.git = {
