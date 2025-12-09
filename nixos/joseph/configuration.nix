@@ -78,8 +78,14 @@
 
   environment.systemPackages = with pkgs; [
     pinentry-curses
+
     home-manager
+
     vim
+
+    texlive.combined.scheme-medium
+    
+    jetbrains.idea-community
   ];
   
   # GnuPG config 
