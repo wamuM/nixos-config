@@ -6,19 +6,21 @@
   services = {
   xserver = {
 	enable = true;
-	displayManager.startx.enable = lib.mkForce true;
+    displayManager.startx.enable = true;
   };
 
   greetd = {
     enable = true;
     settings = {
-      default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time \
+      default_session = lib.mkForce {
+        command = ''
+        ${pkgs.tuigreet}/bin/tuigreet \
+         --time \
 		 --cmd 'startx' \
 		 --greeting 'Welcome back!' \
 		 --asterisks \
-		 --remember \
-		 --user wamu-m ";
+		 --remember 
+         '';
         user = "greeter";
       };
     };
