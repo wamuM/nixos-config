@@ -1,6 +1,6 @@
 {config, pkgs, ...}:
 {
-  imports = [ ../../modules/default.nix ];
+  imports = [ ../../modules/bundle.nix ];
   options = {};
   config = {
    home.username = "wamu-m";
@@ -12,12 +12,10 @@
    
    user-config.editor = "nvim";
 
-   programs.bash = {
-   	enable = true;
-	enableCompletion = true;
-   };
 
    git.enable = true;
+   
+   bash.enable = true;
 
    programs.gpg.enable = true;
    programs.gpg.homedir = "${config.xdg.dataHome}/gnupg";
