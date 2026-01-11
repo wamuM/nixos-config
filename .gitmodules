@@ -1,6 +1,3 @@
 [submodule "Dotfiles"]
 	path = Dotfiles
 	url = git@github.com:wamuM/dotfiles
-[submodule "Dotfiles"]
-	path = Dotfiles
-	url = git@github.com:wamuM/dotfiles
