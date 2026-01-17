@@ -13,18 +13,28 @@
    user-config.editor = "nvim";
 
 
-   git.enable = true;
-   
-   bash.enable = true;
+   bundle.git.enable = true;
+   bundle.bash.enable = true;
 
    programs.gpg.enable = true;
    programs.gpg.homedir = "${config.xdg.dataHome}/gnupg";
 
    programs.neovim.enable = true;
 
-   home.packages = [];
-   home.file = {};
+   bundle.dotfiles = {
+        enable = true;
+        repo_url = "git@github.com:wamuM/dotfiles";
+        directory = "${config.home.homeDirectory}/Dotfiles";
+	update = false;
+        ref = "origin/master";
+        modules = ["bashrc.d" "jump" "tmux" "awesome" "nvim"];
+   };
 
+   home.file = {};
+   services.network-manager-applet.enable = true;
+   bundle.input-method.enable = true;
+
+   # Nothing bellow this line please
    home.stateVersion = "25.11";
    programs.home-manager.enable = true;
   };

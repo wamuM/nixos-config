@@ -12,35 +12,47 @@
 
   nixpkgs.config.allowUnfree = true;
 
+
+  programs.slock.enable = true;
+
   environment.systemPackages = with pkgs; [
-    pinentry-curses
-
     home-manager
-
+    
+    # Developement
     vim
     gnumake
+
+    # A (LaTeX)
+    texlive.combined.scheme-medium
+   
+    # PROP (Java)
+    jetbrains.idea-community
+
+    # LI (SAT solvers)
+    kissat
+    swi-prolog
+
+    # Compression
+    zip
+    unzip
+
+    # terminal
     (st.override {
         conf = builtins.readFile ../modules/st/config.def.h;
     })
     xclip
-
-    texlive.combined.scheme-medium
-    
-    jetbrains.idea-community
-
-    kissat
-    swi-prolog
-
-    zip
-    unzip
-
     fastfetch
     tmux
+    pinentry-curses
+    fzf
 
+    #python :d
     python313
     python313Packages.dbus-python   
-    
+   
+    # Modules
     stow
+    
   ];
 
 }

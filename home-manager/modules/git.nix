@@ -1,9 +1,9 @@
 { pkgs, lib, config, ...}:
 {
-  options = {
-	git.enable = lib.mkEnableOption "enables git";
+  options.bundle.git = {
+	enable = lib.mkEnableOption "Enables git";
   }; 
-  config = lib.mkIf config.git.enable {
+  config = lib.mkIf config.bundle.git.enable {
 	programs.git.enable = true;
 	programs.git.settings = {
 		core = {

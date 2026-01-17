@@ -5,9 +5,6 @@
   networking.wireless.enable = false;
   networking.networkmanager.enable = true;
 
-  environment.systemPackages = with pkgs; [
-	networkmanagerapplet
-  ];
  
   services.printing.enable = true;
   hardware.bluetooth.enable = true;
@@ -22,5 +19,9 @@
     pulse.enable = true;
   };
 
-  programs.nix-ld.enable = true;
+  environment.systemPackages = with pkgs; [
+	networkmanagerapplet
+    alsa-utils
+    brightnessctl
+  ];
 }  

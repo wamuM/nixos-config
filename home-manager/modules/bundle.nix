@@ -5,8 +5,8 @@ imports = [
 	./input-method.nix
 	./git.nix	
 	./bash.nix
+    	./dotfiles.nix
 ];
-input-method.enable = lib.mkDefault true;
 }
 
 

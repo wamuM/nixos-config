@@ -1,9 +1,9 @@
 {config, pkgs, lib, ...}:
 {
-options = {
+options.bundle = {
 	bash.enable = lib.mkEnableOption "Enable the BASH defaults"; 
 };
-config = lib.mkIf config.bash.enable {
+config = lib.mkIf config.bundle.bash.enable {
    programs.bash = {
    	enable = true;
 	enableCompletion = true;

@@ -1,9 +1,9 @@
 { pkgs, lib, config, ...}:
 {
-  options = {
+  options.bundle = {
 	input-method.enable = lib.mkEnableOption "enables fcitx5";
   }; 
-  config = lib.mkIf config.input-method.enable {
+  config = lib.mkIf config.bundle.input-method.enable {
 	i18n.inputMethod = {
 		type = "fcitx5";
 		enable = true;
