@@ -5,7 +5,8 @@ imports = [
 	./input-method.nix
 	./git.nix	
 	./bash.nix
-    	./dotfiles.nix
+    ./dotfiles.nix
+    ./firefox.nix
 ];
 }
 
