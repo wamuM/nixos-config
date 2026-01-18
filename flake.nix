@@ -15,12 +15,12 @@
       		specialArgs = {inherit inputs;};
 	   	system = "x86_64-Linux";	
       		modules = [
-        		./nixos/joseph/configuration.nix
+        	./nixos/joseph/configuration.nix
 			home-manager.nixosModules.home-manager{
 				home-manager.useGlobalPkgs = true;
 				home-manager.useUserPackages = true;
 				home-manager.extraSpecialArgs = {inherit inputs;};
-				home-manager.users.wamu-m = ./home-manager/users/wamu-m/home.nix;
+				home-manager.users.wamu-m = ./home-manager/users/monolithic/home.nix;
 			}
       		];
 	};

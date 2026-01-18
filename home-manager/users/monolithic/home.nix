@@ -12,7 +12,6 @@
    
    user-config.editor = "nvim";
 
-
    bundle.git.enable = true;
    bundle.bash.enable = true;
 
@@ -31,9 +30,12 @@
    };
 
    home.file = {};
+
+   bundle.firefox.enable = true;
+
    services.network-manager-applet.enable = true;
    bundle.input-method.enable = true;
-
+    
    # Nothing bellow this line please
    home.stateVersion = "25.11";
    programs.home-manager.enable = true;
