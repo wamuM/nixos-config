@@ -14,14 +14,13 @@ config = lib.mkIf config.bundle.bash.enable {
 	shellOptions = [
 		"histappend"
 		"globstar"
-		"cdable_vars"
+		"-cdable_vars"
 		"cdspell"
 		"checkwinsize"
 		"cmdhist"
 		"-direxpand"
 		"dirspell"
 		"extglob"
-		"globstar"
 		"nullglob"
 		"checkjobs"
 	];
