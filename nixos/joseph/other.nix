@@ -5,7 +5,7 @@
   networking.wireless.enable = false;
   networking.networkmanager.enable = true;
 
- 
+  services.tailscale.enable = true;
   services.printing.enable = true;
   hardware.bluetooth.enable = true;
 
