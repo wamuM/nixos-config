@@ -19,6 +19,7 @@
     fastfetch
     tmux
     pinentry-curses
+    yazi
 
     #nvim telescope
     fzf
