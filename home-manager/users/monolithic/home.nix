@@ -24,9 +24,9 @@
         enable = true;
         repo_url = "git@github.com:wamuM/dotfiles";
         directory = "${config.home.homeDirectory}/Dotfiles";
-	update = false;
+	    update = false;
         ref = "origin/master";
-        modules = ["bashrc.d" "jump" "tmux" "awesome" "nvim"];
+        modules = ["auto-tmux" "bashrc.d" "jump" "tmux" "awesome" "nvim"];
    };
 
    home.file = {};
