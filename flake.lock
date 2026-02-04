@@ -40,7 +40,21 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "secrets": "secrets"
+      }
+    },
+    "secrets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1769552543,
+        "narHash": "sha256-BF7PvS7gQ4kQb+VGEjwS8WQ2TwCznpyvTgmisEr2M1M=",
+        "path": "/etc/secrets",
+        "type": "path"
+      },
+      "original": {
+        "path": "/etc/secrets",
+        "type": "path"
       }
     }
   },
