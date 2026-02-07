@@ -47,8 +47,8 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1769552543,
-        "narHash": "sha256-BF7PvS7gQ4kQb+VGEjwS8WQ2TwCznpyvTgmisEr2M1M=",
+        "lastModified": 1769554383,
+        "narHash": "sha256-Mx3fHneRpg35VY4H8xIX+hQ6veWt70WSpyAH1xENvHs=",
         "path": "/etc/secrets",
         "type": "path"
       },
