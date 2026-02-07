@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
 	awesome
+    xdotool
   ];
   services = {
   xserver = {
