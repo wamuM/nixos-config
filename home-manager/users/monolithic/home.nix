@@ -20,6 +20,8 @@
 
    programs.neovim.enable = true;
 
+   bundle.rofi.enable = true;
+
    bundle.dotfiles = {
         enable = true;
         repo_url = "git@github.com:wamuM/dotfiles";

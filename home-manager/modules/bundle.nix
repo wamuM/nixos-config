@@ -7,6 +7,7 @@ imports = [
 	./bash.nix
     ./dotfiles.nix
     ./firefox.nix
+    ./rofi.nix
 ];
 }
 

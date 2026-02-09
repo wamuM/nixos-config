@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
 	awesome
+    rofi
     xdotool
   ];
   services = {
