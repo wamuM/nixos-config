@@ -6,6 +6,9 @@
 
   environment.systemPackages = with pkgs; [
     home-manager
+
+    # multimedia
+    mpv
     
     # Compression
     zip
