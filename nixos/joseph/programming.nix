@@ -43,6 +43,7 @@
 
     # Haskell 
     haskell-language-server # LSP
+    haskell.compiler.native-bignum.ghc98
 
     #python :d
     python313
