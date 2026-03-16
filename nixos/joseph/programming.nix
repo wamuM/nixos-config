@@ -24,6 +24,8 @@
     texlive.combined.scheme-medium
    
     ## Java
+    gradle
+    graphviz
     jetbrains.idea-community
     jdk21
     jdt-language-server
