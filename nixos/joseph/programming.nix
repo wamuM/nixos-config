@@ -49,6 +49,7 @@
     python313
     pyright                         # LSP
     python313Packages.dbus-python   
+    python313Packages.pip
 
     # Yaml
     yaml-language-server

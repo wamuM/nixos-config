@@ -3,12 +3,43 @@ let
     vpn-wamu-m-com-ip = lib.replaceStrings [ "\n" "\r" "\t" " " ] 
                                            [ ""   ""   ""   ""  ]
                        ( builtins.readFile (inputs.secrets + /vps-ip ) ) ;
+    eduroam-password = lib.replaceStrings [ "\n" "\r" "\t" " " ] 
+                                           [ ""   ""   ""   ""  ]
+                       ( builtins.readFile (inputs.secrets + /eduroam-password ) ) ;
 in 
 {
   # Networking
   networking.hostName = "joseph";
   networking.wireless.enable = false;
   networking.networkmanager.enable = true;
+  
+  # Eduroam
+  networking.networkmanager.ensureProfiles.profiles = {
+    eduroam = {
+        connection = {
+            id = "eduroam";
+            type = "wifi";
+            interface-name = "wlp0s20f3";
+        };
+        wifi = {
+            mode = "infrastructure";
+            ssid = "eduroam";
+        };
+        wifi-security = {
+            key-mgmt = "wpa-eap";
+        };
+        "802-1x" = {
+            eap = "ttls";
+            identity = "marcel.mula";
+            anonymous_identity="cat.202010081836@upc.edu";
+            password = "${eduroam-password}";
+            phase2-auth = "pap";
+            ca-cert = "/etc/secrets/eduroam-ca.pem";
+        };
+        ipv4.method = "auto";
+        ipv6.method = "auto";
+    };
+  };
 
   networking.firewall = {
         allowedUDPPorts = [ 10220 ]; # wg0 port
@@ -34,4 +65,8 @@ in
   services.tailscale.enable = true;
   services.printing.enable = true;
   hardware.bluetooth.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    openfortivpn
+  ];
 }  
