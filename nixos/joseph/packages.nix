@@ -29,9 +29,10 @@
     fd
     ripgrep
 
+    # Only office
+    onlyoffice-desktopeditors
+
     # Modules
     stow
-    
   ];
-
 }
