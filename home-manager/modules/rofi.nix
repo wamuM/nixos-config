@@ -4,6 +4,14 @@
 	rofi.enable = lib.mkEnableOption "enables rofi";
   }; 
   config = lib.mkIf config.bundle.rofi.enable {
+    home.file.".local/bin/lock" = {
+        text = ''
+        #!/usr/bin/env bash
+        slock & 
+        sleep 1 && systemctl suspend
+        '';
+        executable = true;
+    };
     home.file.".local/bin/launcher" = {
         text = ''
             #!/usr/bin/env bash
