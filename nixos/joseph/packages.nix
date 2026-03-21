@@ -32,6 +32,9 @@
     # Only office
     onlyoffice-desktopeditors
 
+    # Maths
+    libqalculate
+
     # Modules
     stow
   ];
