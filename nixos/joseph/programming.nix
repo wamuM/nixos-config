@@ -30,6 +30,9 @@
     jdk21
     jdt-language-server
 
+    # JavaScript
+    nodejs
+
     # Prolog 
     swi-prolog
 
