@@ -7,6 +7,12 @@
   environment.systemPackages = with pkgs; [
     home-manager
 
+    # Games
+    superTuxKart 
+
+    # passwords
+    keepassxc
+
     # multimedia
     mpv
     

@@ -9,6 +9,7 @@
         #!/usr/bin/env bash
         slock & 
         sleep 1 && systemctl suspend
+        awesome-client 'awesome.restart()'
         '';
         executable = true;
     };

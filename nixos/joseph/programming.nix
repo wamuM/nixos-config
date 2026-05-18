@@ -21,8 +21,14 @@
     clang-tools
 
     ## Latex
-    texlive.combined.scheme-medium
-   
+    (texliveFull.withPackages (ps: with ps; [
+        biblatex
+        minted
+        upquote
+        tcolorbox
+    ]))
+    biber
+
     ## Java
     gradle
     graphviz
@@ -32,6 +38,7 @@
 
     # JavaScript
     nodejs
+    
 
     # Prolog 
     swi-prolog
