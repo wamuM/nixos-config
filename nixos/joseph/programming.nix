@@ -43,6 +43,9 @@
     # Prolog 
     swi-prolog
 
+    # CLIPS (Expert System) 
+    clips
+
     # Lean
     lean4
     
@@ -57,7 +60,7 @@
     haskell-language-server # LSP
     haskell.compiler.native-bignum.ghc98
 
-    #python :d
+    #python 
     python313
     pyright                         # LSP
     python313Packages.dbus-python   
@@ -65,6 +68,7 @@
 
     # Yaml
     yaml-language-server
+
     # JSon
     vscode-json-languageserver
     

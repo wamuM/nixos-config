@@ -15,10 +15,14 @@
 
     # multimedia
     mpv
+    inkscape
     
     # Compression
     zip
     unzip
+
+    # Set temporal events
+    at
 
     # terminal
     (st.override {
