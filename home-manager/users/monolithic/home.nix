@@ -23,7 +23,7 @@
    bundle.rofi.enable = true;
 
    bundle.dotfiles = {
-        enable = true;
+        enable = false;
         repo_url = "git@github.com:wamuM/dotfiles";
         directory = "${config.home.homeDirectory}/Dotfiles";
 	    update = false;
