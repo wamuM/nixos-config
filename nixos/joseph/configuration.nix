@@ -13,6 +13,7 @@
       ./fonts.nix
       ./programming.nix
       ./networking.nix
+      ./docker.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
