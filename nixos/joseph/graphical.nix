@@ -7,10 +7,10 @@
   ];
   services = {
   xserver = {
+    excludePackages = [ pkgs.xterm ];
 	enable = true;
     displayManager.startx.enable = true;
   };
-
   greetd = {
     enable = true;
     settings = {

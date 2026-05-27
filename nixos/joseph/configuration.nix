@@ -14,6 +14,7 @@
       ./programming.nix
       ./networking.nix
       ./docker.nix
+      ./terminal.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

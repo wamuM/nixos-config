@@ -8,6 +8,7 @@ imports = [
     ./dotfiles.nix
     ./firefox.nix
     ./rofi.nix
+    ./terminal.nix
 ];
 }
 

@@ -16,23 +16,14 @@
     # multimedia
     mpv
     inkscape
+
+    # gemini
+    amfora
     
     # Compression
     zip
     unzip
 
-    # Set temporal events
-    at
-
-    # terminal
-    (st.override {
-        conf = builtins.readFile ../modules/st/config.def.h;
-    })
-    xclip
-    fastfetch
-    tmux
-    pinentry-curses
-    yazi
 
     #nvim telescope
     fzf
