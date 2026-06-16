@@ -10,7 +10,6 @@ in
 {
   # Networking
   networking.hostName = "joseph";
-  networking.wireless.enable = false;
   networking.networkmanager.enable = true;
   
   # Eduroam
