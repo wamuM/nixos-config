@@ -60,7 +60,7 @@ in
     # };
   };
   networking.hosts = {
-        "${vpn-wamu-m-com-ip}" = ["vpn.wamu-m.com"];
+        "${vpn-wamu-m-com-ip}" = ["vpn.adyton.wamu-m.com"];
   }; 
   services.tailscale.enable = true;
   services.printing.enable = true;

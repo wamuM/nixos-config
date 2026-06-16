@@ -12,6 +12,7 @@
 
     # passwords
     keepassxc
+    gocryptfs
 
     # multimedia
     mpv
@@ -20,9 +21,10 @@
     # gemini
     amfora
     
-    # Compression
+    # Compression & file management
     zip
     unzip
+    ncdu
 
 
     #nvim telescope
@@ -30,8 +32,8 @@
     fd
     ripgrep
 
-    # Only office
-    onlyoffice-desktopeditors
+    # Office Suit
+    # onlyoffice-desktopeditors # Discarded because it's using Microsoft formats as defaults and most stuff it does it poorly
 
     # Maths
     libqalculate
