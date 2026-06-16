@@ -32,7 +32,7 @@
     ## Java
     gradle
     graphviz
-    jetbrains.idea-community
+    jetbrains.idea-oss
     jdk21
     jdt-language-server
 
