@@ -8,7 +8,7 @@
     home-manager
 
     # Games
-    superTuxKart 
+    supertuxkart
 
     # passwords
     keepassxc
