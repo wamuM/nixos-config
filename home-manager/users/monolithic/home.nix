@@ -39,7 +39,7 @@
    bundle.input-method.enable = true;
     
    # Nothing bellow this line please
-   home.stateVersion = "25.11";
+   home.stateVersion = "26.05";
    programs.home-manager.enable = true;
   };
 }
