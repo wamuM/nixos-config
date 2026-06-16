@@ -13,6 +13,7 @@
   };
   greetd = {
     enable = true;
+    useTextGreeter = true;
     settings = {
       default_session = lib.mkForce {
         command = ''
