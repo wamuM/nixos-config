@@ -16,7 +16,10 @@
    programs.gpg.enable = true;
    programs.gpg.homedir = "${config.xdg.dataHome}/gnupg";
 
-   programs.neovim.enable = true;
+   programs.neovim.enable = lib.mkForce false;
+   home.packages = with pkgs; [
+	neovim
+   ];
 
    bundle.rofi.enable = true;
 
