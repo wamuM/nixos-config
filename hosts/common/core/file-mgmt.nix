@@ -4,6 +4,9 @@
     zip
     unzip
 
+    # Encryption
+    gocryptfs 
+
     #du but with curses interface
     ncdu
 
