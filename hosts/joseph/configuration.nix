@@ -24,8 +24,11 @@ in
         ../common/optional/gemini.nix
 
         ../common/optional/games/supertuxkart.nix
+
+        ../common/optional/media/office.nix
     ];
-    # programming = enableList ["haskell" "rust" "C" "Cpp"];
+    programming = enableList ["haskell" "C" "Cpp"];
+    programs.nm-applet.enable = true;
     # Boot
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;

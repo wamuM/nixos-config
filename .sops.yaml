@@ -1,0 +1,20 @@
+keys:
+  - &master AD2C2F137AC2D58A910F4A2028F93311056DAD8D
+  - &hosts:
+    - &joseph age1asc589elrf52wxv3fu2spawv3q36v249uk5k9tgr3lkf7d8n2a6qmw2lda
+  - &users:
+    - &wamu_m 
+creation_rules:
+  - path_regex: ^secrets/common\.yaml$
+    key_groups:
+      - age: [*joseph]
+        pgp: [*master]
+  - path_regex: ^secrets/hosts/joseph\.yaml$
+    key_groups:
+      - age: [*joseph]
+        pgp: [*master]
+  - path_regex: ^secrets/users/wamu_m.yaml$
+    key_groups:
+      - age: [*wamu_m]
+        pgp: [*master]
+

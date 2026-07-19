@@ -4,6 +4,7 @@
     lib.mkEnableOption "Haskell programming language";
   config = lib.mkIf config.programming.haskell.enable {
       environment.systemPackages = with pkgs;[
+        stack
         haskell-language-server
       ];
    };

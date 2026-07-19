@@ -8,9 +8,9 @@ config = lib.mkIf config.bundle.bash.enable {
    	enable = true;
 	enableCompletion = true;
 	initExtra = ''
-    if [ -f "$HOME/.bashrc.d.sh" ];then
-        source ~/.bashrc.d.sh
-    fi'';
+    		if [ -f "$HOME/.bashrc.d.sh" ];then
+        		source ~/.bashrc.d.sh
+    		fi'';
 	historyControl = ["ignoreboth"];
 	historyFileSize = 10000;
 	historySize = 1000;

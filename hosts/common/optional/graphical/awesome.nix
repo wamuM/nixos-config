@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
 	awesome
     rofi
+    python314
     xdotool
     xclip
     xkill

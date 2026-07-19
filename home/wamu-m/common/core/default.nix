@@ -32,6 +32,8 @@
          modules = ["auto-tmux" "bashrc.d" "jump" "tmux" "awesome" "nvim"];
    };
 
+   bundle.bash.enable = true;
+
    home.file = {};
 
    bundle.firefox.enable = true;
