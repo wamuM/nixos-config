@@ -8,6 +8,8 @@
     xdotool
     xclip
     xkill
+    arandr
+    xrandr
   ];
   services = {
   xserver = {
