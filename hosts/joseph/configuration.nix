@@ -1,4 +1,4 @@
-{pkgs, inputs, config, ...}:
+{pkgs, inputs, lib, config, ...}:
 let 
     enableList = list: builtins.listToAttrs (map (module: {
         name = module;
@@ -6,6 +6,7 @@ let
     }) list);
 in
 {
+    networking.hostName = lib.mkForce "joseph";
     imports = [
         ./hardware-configuration.nix
 
@@ -14,6 +15,7 @@ in
 
         ../common/optional/eduroam.nix
         ../common/optional/hostnames.nix
+        ../common/optional/pronaos.nix
 
         ../common/optional/docker.nix
         ../common/optional/programming
@@ -24,8 +26,10 @@ in
         ../common/optional/gemini.nix
 
         ../common/optional/games/supertuxkart.nix
+        ../common/optional/games/steam.nix
 
         ../common/optional/media/office.nix
+        ../common/optional/3dprinting.nix
     ];
     programming = enableList ["haskell" "C" "Cpp"];
     programs.nm-applet.enable = true;
