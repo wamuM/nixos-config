@@ -30,6 +30,8 @@ in
 
         ../common/optional/media/office.nix
         ../common/optional/3dprinting.nix
+
+        ../common/optional/yubikey.nix
     ];
     programming = enableList ["haskell" "C" "Cpp"];
     programs.nm-applet.enable = true;
