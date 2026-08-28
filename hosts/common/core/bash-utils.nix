@@ -8,5 +8,7 @@ environment.systemPackages = with pkgs; [
     at
     vim
     git
+    libnotify
+    sox
 ];
 }
