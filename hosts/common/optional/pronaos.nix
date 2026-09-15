@@ -21,6 +21,7 @@ in {
                 presharedKeyFile = config.sops.secrets."pronaos/pres_key".path;
                 allowedIPs = ["10.22.0.0/16"];
                 endpoint = "pronaos.wamu-m.com:10100";
+                dns = ["10.22.1.53"];
             }
         ];
 
