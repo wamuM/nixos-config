@@ -15,5 +15,6 @@
         ./python.nix
         ./rust.nix
         ./yaml.nix
+        ./clojure.nix
  ];
 }
