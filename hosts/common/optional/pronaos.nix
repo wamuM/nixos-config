@@ -15,13 +15,14 @@ in {
 
         privateKeyFile = config.sops.secrets."pronaos/priv_key".path;
 
+        dns = ["10.22.1.53"];
+
         peers = [
             {
                 publicKey = "QAI1Nuo2mvWmEJgYUpyeyi7nEBX+m5QquPDLoUMymU8=";
                 presharedKeyFile = config.sops.secrets."pronaos/pres_key".path;
                 allowedIPs = ["10.22.0.0/16"];
                 endpoint = "pronaos.wamu-m.com:10100";
-                dns = ["10.22.1.53"];
             }
         ];
 
