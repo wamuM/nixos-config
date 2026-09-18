@@ -13,7 +13,7 @@ in
         ../common/optional/audio.nix
         ../common/optional/brightness.nix
 
-        ../common/optional/eduroam.nix
+#        ../common/optional/eduroam.nix WIP
         ../common/optional/hostnames.nix
         ../common/optional/pronaos.nix
 
