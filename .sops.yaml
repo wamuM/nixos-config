@@ -13,7 +13,7 @@ creation_rules:
     key_groups:
       - age: [*joseph]
         pgp: [*master]
-  - path_regex: ^secrets/users/wamu_m.yaml$
+  - path_regex: ^secrets/users/wamu-m.yaml$
     key_groups:
       - age: [*wamu_m]
         pgp: [*master]
