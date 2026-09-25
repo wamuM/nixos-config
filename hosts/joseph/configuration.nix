@@ -29,6 +29,7 @@ in
         ../common/optional/games/steam.nix
 
         ../common/optional/media/office.nix
+        ../common/optional/media/pdf.nix
         ../common/optional/3dprinting.nix
 
         ../common/optional/yubikey.nix
