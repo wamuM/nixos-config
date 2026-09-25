@@ -33,7 +33,7 @@ in
 
         ../common/optional/yubikey.nix
     ];
-    programming = enableList ["haskell" "C" "Cpp"];
+    programming = enableList ["haskell" "C" "Cpp" "latex"];
     programs.nm-applet.enable = true;
     # Boot
     boot.loader.systemd-boot.enable = true;
