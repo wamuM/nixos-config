@@ -1,41 +1,23 @@
 {pkgs, inputs, lib, config, ...}:
-let 
-    enableList = list: builtins.listToAttrs (map (module: {
-        name = module;
-        value = {enable = true;};
-    }) list);
-in
 {
     networking.hostName = lib.mkForce "joseph";
     imports = [
         ./hardware-configuration.nix
 
-        ../common/optional/audio.nix
-        ../common/optional/brightness.nix
+        ../modules/docker.nix
+        ../modules/brightnessctl.nix
 
-#        ../common/optional/eduroam.nix WIP
-        ../common/optional/hostnames.nix
-        ../common/optional/pronaos.nix
+        ../modules/sessions/awesome.nix
 
-        ../common/optional/docker.nix
-        ../common/optional/programming
+        ../modules/networks/eduroam.nix
+        ../modules/networks/pronaos.nix
+        ../modules/networks/upclink.nix
 
-        ../common/optional/graphical/awesome.nix
-        ../common/optional/st.nix
-
-        ../common/optional/gemini.nix
-
-        ../common/optional/games/supertuxkart.nix
-        ../common/optional/games/steam.nix
-
-        ../common/optional/media/office.nix
-        ../common/optional/media/pdf.nix
-        ../common/optional/3dprinting.nix
-
-        ../common/optional/yubikey.nix
+        ../modules/steam.nix
     ];
-    programming = enableList ["haskell" "C" "Cpp" "latex"];
+
     programs.nm-applet.enable = true;
+
     # Boot
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;

@@ -5,10 +5,6 @@ options = {
 		type = lib.types.str;
 		description = "The prefered terminal editor by the user";
 	};
-	user-config.visual = lib.mkOption {
-		type = lib.types.str;
-		description = "The pefered desktop app editor by the user";
-	};
 	user-config.pager = lib.mkOption {
 		type = lib.types.str;
 		default = "less";
@@ -22,7 +18,7 @@ options = {
 		type = lib.types.str;
 		description = "The user's name";
 	};
-	user-config.pgp-key = lib.mkOption {
+	user-config.pgpKey = lib.mkOption {
 		type = lib.types.str;
 		description = "The user's main pgp key";
 	};
@@ -30,9 +26,7 @@ options = {
 config = {
 	home.sessionVariables = {
 		EDITOR = config.user-config.editor;
-		# VISUAL = config.user-config.visual;
 		PAGER = config.user-config.pager;
 	};
 };
 }
-

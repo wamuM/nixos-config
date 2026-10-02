@@ -1,0 +1,18 @@
+#!/bin/bash 
+#  Keyboard Settings
+setxkbmap us altgr-intl
+
+export GTK_IM_MODULE="fcitx"
+export QT_IM_MODULE="fcitx"
+export SDL_IM_MODULE="fcitx" 
+export XMODIFIERS="@im=fcitx"
+fcitx5 -d &
+
+systemctl --user import-environment DISPLAY XAUTHORITY
+dbus-update-activation-environment --sytemd DISPLAY XAUTHORITY
+
+# Applets
+nm-applet &
+
+# Window Manager
+exec awesome

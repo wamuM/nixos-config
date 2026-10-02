@@ -1,10 +1,10 @@
 { pkgs, lib, config, ... }:
 let
-  cfg = config.bundle.dotfiles;
+  cfg = config.dotfiles;
   gitSSH = pkgs.git.override { withSsh = true; };
 in 
 {
-    options.bundle.dotfiles = {
+    options.dotfiles = {
         enable = lib.mkEnableOption "Enables external dotfiles management";
         repo_url = lib.mkOption {
            type = lib.types.str;
