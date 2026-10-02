@@ -2,6 +2,6 @@
 {
   options =  {}; 
   config = {
-	programs.ssh.enable = true;
+	programs.ssh.enable = false;
   };
 }
