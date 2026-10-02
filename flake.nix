@@ -42,6 +42,16 @@ let
             ./hosts/common
             ./hosts/${host}/configuration.nix
 
+            {
+                users.users = builtins.listToAttrs (map (user: {
+                    name = user;
+                    value = {
+                        isNormalUser = true;
+                        home = "/home/${user}";
+                    };
+                }) (usersForHost host));
+            }
+
             home-manager.nixosModules.home-manager 
 
             {

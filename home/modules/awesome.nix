@@ -4,10 +4,10 @@ options = {};
 config = {
     home.file.".xinitrc".source = ../../files/awesome/xinitrc;
 
-    home.sessionPath = lib.mkAfter ["$HOME/.local/bin"]
-    home.file.".local/bin" = ../../files/awesome/bin;
+    home.sessionPath = lib.mkAfter ["$HOME/.local/bin"];
+    home.file.".local/bin".source = ../../files/awesome/bin;
 
-    home.file.".config/rofi/scripts" = ../../files/rofi_scripts;
+    home.file.".config/rofi/scripts".source = ../../files/rofi_scripts;
     programs.rofi = {
         enable = true;
         theme = "sidebar";
@@ -17,9 +17,10 @@ config = {
         "drun"
         "run"
         "window"
-    ];
-    extraConfig = {
-      show-icons = true;
+        ];
+        extraConfig = {
+            show-icons = true;
+        };
     };
     
     # fcitx5 as input method

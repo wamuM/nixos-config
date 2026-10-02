@@ -26,6 +26,6 @@ config = {
 		"checkjobs"
 	];
    };
-   dotfiles.modules  = lib.mkAfter [ "bashrc.d" "jump" "drawer"]
+   dotfiles.modules  = lib.mkAfter [ "bashrc.d" "jump" "drawer"];
 };
 }
