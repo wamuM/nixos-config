@@ -46,7 +46,7 @@ config = {
         directory = "${config.home.homeDirectory}/Dotfiles";
         update = false;
         ref = "origin/master";
-        modules = [];
+        modules = ["vault"];
     };
 
     home.file = {};
