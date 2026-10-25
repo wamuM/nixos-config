@@ -1,6 +1,6 @@
 { inputs, config, pkgs, ... }:
 {
   home.packages = with pkgs; [
-    winboat
+#    winboat
   ];
 }

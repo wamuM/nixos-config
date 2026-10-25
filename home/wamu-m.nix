@@ -11,6 +11,7 @@ imports = [
     ./modules/programs/ssh.nix
 
     ./modules/terminal/bash.nix
+    ./modules/terminal/qalc.nix
     ./modules/terminal/tmux.nix
     ./modules/terminal/st.nix
 
@@ -54,9 +55,6 @@ config = {
 
     home.file = {};
 
-    home.packages = with pkgs; [
-        libqalculate
-    ];
     
     # Nothing bellow this line please
     home.stateVersion = "26.05";

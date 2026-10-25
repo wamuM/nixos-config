@@ -24,10 +24,16 @@ let
          && builtins.pathExists ( ./hosts + "/${name}/configuration.nix"))
         (builtins.attrNames hostEntries);
 
-    usersForHost = host: {
-        joseph = [ "wamu-m" ];
-        leonard = [ "wamu-m" ];
-    }.${host} or [];
+    usersForHost = host: 
+    let
+        usersDir = ./hosts + "/${host}/users/";
+    in 
+        if builtins.pathExists usersDir then
+            let 
+                dirContents = builtins.readDir usersDir;
+                nixFiles = lib.filterAttrs (name: type: type == "regular" && lib.hasSuffix ".nix" name) dirContents;
+            in map (name: lib.removeSuffix ".nix" name) (builtins.attrNames nixFiles)
+        else [];
 
     systemForHost = host: {
         # joseph = "x86_64-linux";
@@ -41,20 +47,8 @@ let
         modules = [
             ./hosts/common
             ./hosts/${host}/configuration.nix
-            {
-		        users.users.root.hashedPassword = "!";
-            }
 
-            {
-                users.users = builtins.listToAttrs (map (user: {
-                    name = user;
-                    value = {
-                        isNormalUser = true;
-			            extraGroups = ["wheel" "docker"];
-                        home = "/home/${user}";
-                    };
-                }) (usersForHost host));
-            }
+            { users.users.root.hashedPassword = "!"; }
 
             home-manager.nixosModules.home-manager 
 
@@ -62,13 +56,8 @@ let
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
                 home-manager.extraSpecialArgs = { inherit inputs; };
-
-                home-manager.users = builtins.listToAttrs ( map (user: {
-                    name = user;
-                    value = import ./home/${user}.nix;
-                }) (usersForHost host) );
             }
-        ];
+        ] ++ (map (user: ./hosts + "/${host}/users/${user}.nix") (usersForHost host));
     };
 in
 {
