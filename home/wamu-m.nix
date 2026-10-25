@@ -25,6 +25,9 @@ imports = [
     ./modules/browsers/firefox.nix
     ./modules/browsers/gemini.nix
     ./modules/browsers/thunderbird.nix
+    ./modules/browsers/matrix.nix
+
+    ./modules/winboat.nix
 ];
 options = {};
 config = {
@@ -50,6 +53,10 @@ config = {
     };
 
     home.file = {};
+
+    home.packages = with pkgs; [
+        libqalculate
+    ];
     
     # Nothing bellow this line please
     home.stateVersion = "26.05";

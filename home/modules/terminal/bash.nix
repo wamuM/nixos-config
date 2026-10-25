@@ -27,5 +27,10 @@ config = {
 	];
    };
    dotfiles.modules  = lib.mkAfter [ "bashrc.d" "jump" "drawer"];
+
+    home.packages = with pkgs; [
+        fastfetch
+        yazi
+    ];
 };
 }
