@@ -5,7 +5,10 @@ config = {
     home.file.".xinitrc".source = ../../files/awesome/xinitrc;
 
     home.sessionPath = lib.mkAfter ["$HOME/.local/bin"];
-    home.file.".local/bin".source = ../../files/awesome/bin;
+    home.file.".local/bin" = {
+        source = ../../files/awesome/bin;
+        recursive = true;
+    };
 
     home.file.".config/rofi/scripts".source = ../../files/rofi_scripts;
     programs.rofi = {
