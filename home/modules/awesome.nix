@@ -11,6 +11,7 @@ config = {
     };
 
     home.file.".config/rofi/scripts".source = ../../files/rofi_scripts;
+
     programs.rofi = {
         enable = true;
         theme = "sidebar";
@@ -23,6 +24,22 @@ config = {
         ];
         extraConfig = {
             show-icons = true;
+        };
+    };
+
+    home.file."Pictures/Screenshots/.keep".text = "";
+    services.flameshot = {
+        enable = true;
+        settings = {
+            General = {
+                uiColor = "#FFFF00";
+                contrastUiColor = "#000000";
+                disabledTrayIcon = true;
+                showDesktopNotification = true;
+                savePath = "${config.home.homeDirectory}/Pictures/Screenshots";
+                filenamePattern = "%Y-%m-%d_%H-%M-%S";
+                savePathFixed = true;
+            };
         };
     };
     
