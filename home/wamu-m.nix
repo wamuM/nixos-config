@@ -28,6 +28,8 @@ imports = [
     ./modules/browsers/thunderbird.nix
     ./modules/browsers/matrix.nix
 
+    ./modules/sailing.nix
+
     ./modules/winboat.nix
 ];
 options = {};
