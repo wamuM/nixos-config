@@ -4,7 +4,6 @@
   services.flatpak = {
     enable = true;
     # remotes = [];
-
     uninstallUnused = true;
     update.auto = {
         enable = true;

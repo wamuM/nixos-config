@@ -28,9 +28,7 @@ imports = [
     ./modules/browsers/thunderbird.nix
     ./modules/browsers/matrix.nix
 
-    ./modules/sailing.nix
-
-    ./modules/winboat.nix
+    ./modules/programs/opencpn.nix
 ];
 options = {};
 config = {
