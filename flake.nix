@@ -3,6 +3,8 @@ description = "wamu_M's Nix Config";
 inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
 
+    nix-flatpak.url = "github:gmodena/nix-flatpak?ref=latest";
+
     sops-nix = {
         url = "github:Mic92/sops-nix";
         inputs.nixpkgs.follows = "nixpkgs";
@@ -56,6 +58,9 @@ let
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
                 home-manager.extraSpecialArgs = { inherit inputs; };
+                home-manager.sharedModules = [
+                    inputs.nix-flatpak.homeManagerModules.nix-flatpak
+                ];
             }
         ] ++ (map (user: ./hosts + "/${host}/users/${user}.nix") (usersForHost host));
     };

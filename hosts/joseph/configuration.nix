@@ -5,6 +5,7 @@
         ./hardware-configuration.nix
 
         ../modules/docker.nix
+        ../modules/flatpak.nix
         ../modules/brightnessctl.nix
 
         ../modules/sessions/awesome.nix
